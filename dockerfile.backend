@@ -1,0 +1,17 @@
+# Use an official Golang runtime as a parent image
+FROM golang:go1.21.0
+
+# Set the working directory in the container
+WORKDIR C:/Users/223068950/Desktop/golang-angular/frontend
+
+# Copy the backend code into the container
+COPY backend .
+
+# Build the Golang app
+RUN go build -o main
+
+# Expose the port the app will run on
+EXPOSE 8080
+
+# Start the Golang app
+CMD ["./main"]

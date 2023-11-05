@@ -1,0 +1,15 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: C:/Users/223068950/Desktop/golang-angular
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "80:80"
+
+  backend:
+    build:
+      context: C:/Users/223068950/Desktop/golang-angular
+      dockerfile: Dockerfile.backend
+    ports:
+      - "8080:8080"
