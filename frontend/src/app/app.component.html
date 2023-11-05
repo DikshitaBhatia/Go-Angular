@@ -1,0 +1,46 @@
+<!--
+  <eds-tabs  active-tab-index="0"  tabs-mode="modern"
+  overflow-menu-width="auto">  
+  <eds-tabs-item label="Tab 1 lorem">   
+     <div class="u-pl-"> Tab 1 massa placerat duis ultricies lacus sed 
+     </div>
+  </eds-tabs-item>  
+  <eds-tabs-item label="Tab 2 ipsum">    
+    <div class="u-pl-">
+  Tab 2 nec tincidunt praesent semper feugiat nibh 
+    </div>  
+    </eds-tabs-item>
+  <eds-tabs-item label="Tab 4 sit">    <div class="u-pl-"> Tab 4 metus aliquam
+  eleifend mi in nulla posuere sollicitudin aliquam ultrices </div>
+  </eds-tabs-item></eds-tabs>
+-->
+<eds-tabs  active-tab-index="0"  tabs-mode="modern" aria-label="Add User"
+  overflow-menu-width="auto">  
+<!-- <nav class="navbar navbar-expand-sm 
+  bg-success navbar-dark"> -->
+  <!-- Links -->
+  <!-- <ul class="navbar-nav">
+    <li class="nav-item"> -->
+      <eds-tabs-item label="User List"> 
+        <div class="u-pl-">
+      <a routerLink="/users" class="nav-link" 
+       routerLinkActive="active">User List</a>
+    </div>
+  </eds-tabs-item>
+  <eds-tabs-item label="Add user"> 
+    <div class="u-pl-">
+      <a routerLink="/add" class="nav-link" 
+      routerLinkActive="active">Add User</a>
+</div>
+</eds-tabs-item>
+</eds-tabs>
+<div class="container">
+  <br>
+  <h2 style="text-align: center;">{{title}}</h2>
+  <hr>
+  <div class="card">
+    <div class="card-body">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

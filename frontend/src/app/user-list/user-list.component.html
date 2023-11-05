@@ -1,0 +1,66 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>User List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users | async">
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+            <td>{{user.email}}</td>
+            <!-- 
+              <div id="button-group" class="button-group button-group--blue">  
+                <input id="id1" name="button-group" type="radio">  
+                <label for="id1" class="button button--max-width button--icon-block">    
+                  <span class="button--ellipsed-text">
+                    Update
+                  </span>  
+                </label>  
+                <input id="id2" name="button-group" type="radio">  
+                <label for="id2" class="button button--max-width button--icon-block">   
+                 <span class="button--ellipsed-text">Delete</span>  
+                </label>  <input id="id3" name="button-group" type="radio" disabled="">  
+                <label for="id3" class="button button--max-width button--icon-block" aria-expanded="true">    
+                  <span class="button--ellipsed-text">
+                    Details
+                  </span>  
+                </label>
+              </div>
+            -->
+            <td>
+              <div id="button-group" class="button-group button-group--blue">  
+                <input id="id1" name="button-group" type="radio" (click)="updateUser(user.id)">  
+                <label for="id1" class="button button--max-width button--icon-block">    
+                  <span class="button--ellipsed-text" >
+                    Update
+                  </span>  
+                </label>  
+              
+                <input id="id2" name="button-group" type="radio" (click)="deleteUser(user.id)" >  
+                <label for="id2" class="button button--max-width button--icon-block">   
+                 <span class="button--ellipsed-text">
+                  Delete
+                </span>  
+                </label>  
+                <input id="id3" name="button-group" type="radio" disabled="" (click)="userDetails(user.id)">  
+                <label for="id3" class="button button--max-width button--icon-block" aria-expanded="true">    
+                  <span class="button--ellipsed-text">
+                    Details
+                  </span>  
+                </label>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
